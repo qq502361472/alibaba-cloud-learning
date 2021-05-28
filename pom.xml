@@ -14,6 +14,7 @@
         <module>provider-payment</module>
         <module>consumer-order</module>
         <module>gateway</module>
+        <module>provider-inventory</module>
     </modules>
     <packaging>pom</packaging>
 
