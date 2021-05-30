@@ -1,6 +1,6 @@
 spring:
   application:
-    name: provider-inventory
+    name: provider-storage
   cloud:
     nacos:
       discovery:
