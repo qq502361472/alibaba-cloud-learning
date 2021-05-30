@@ -20,7 +20,7 @@
     <update id="updateOrderStatus">
         UPDATE `t_order`
         SET status = 1
-        WHERE user_id = #{userId} AND status = #{status};
+        WHERE id = #{orderID} AND status = 0;
     </update>
 
     <select id="getOrderByID" parameterType="long" resultMap="BaseResultMap">

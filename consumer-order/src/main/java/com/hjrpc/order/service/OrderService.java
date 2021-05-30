@@ -6,5 +6,5 @@ import com.hjrpc.api.entity.Order;
 public interface OrderService {
     int createOrder(Order order);
 
-    CommonResult payOrder(String orderID);
+    CommonResult payOrder(Long orderID);
 }

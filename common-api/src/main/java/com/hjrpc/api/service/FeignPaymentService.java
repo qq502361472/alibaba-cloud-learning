@@ -5,10 +5,9 @@ import com.hjrpc.api.config.FeignConfig;
 import com.hjrpc.api.entity.Payment;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.math.BigDecimal;
 
 
 @Component
@@ -29,4 +28,7 @@ public interface FeignPaymentService {
 
     @GetMapping(value = "/hystrix/{type}")
     public CommonResult hystrixTest(@PathVariable("type") String type);
+
+    @GetMapping(value = "/decreaseAccount")
+    CommonResult decreaseAccount(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
 }

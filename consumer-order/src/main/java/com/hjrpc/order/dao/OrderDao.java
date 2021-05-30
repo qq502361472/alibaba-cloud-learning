@@ -8,5 +8,5 @@ public interface OrderDao {
     int createOrder(Order order);
     int updateOrderStatus(Long orderID);
 
-    Order getOrderByID(String orderID);
+    Order getOrderByID(Long orderID);
 }

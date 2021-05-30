@@ -4,6 +4,8 @@ import com.hjrpc.api.common.CommonResult;
 import com.hjrpc.api.entity.Payment;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
+
 @Component
 public class FeignPaymentServiceFallback implements FeignPaymentService {
     @Override
@@ -23,6 +25,11 @@ public class FeignPaymentServiceFallback implements FeignPaymentService {
 
     @Override
     public CommonResult hystrixTest(String type) {
+        return CommonResult.demotionFailed("feign服务降级");
+    }
+
+    @Override
+    public CommonResult decreaseAccount(Long userId, BigDecimal money) {
         return CommonResult.demotionFailed("feign服务降级");
     }
 }
