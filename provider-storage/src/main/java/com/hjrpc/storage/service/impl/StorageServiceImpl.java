@@ -17,6 +17,7 @@ public class StorageServiceImpl implements StorageService {
         if (res == 1) {
             return CommonResult.success("库存扣减成功");
         }
+        System.out.println(1/0);
         return CommonResult.failed("库存扣减失败");
     }
 }

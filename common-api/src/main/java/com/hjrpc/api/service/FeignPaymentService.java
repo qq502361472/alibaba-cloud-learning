@@ -30,5 +30,5 @@ public interface FeignPaymentService {
     public CommonResult hystrixTest(@PathVariable("type") String type);
 
     @GetMapping(value = "/decreaseAccount")
-    CommonResult decreaseAccount(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
+    public CommonResult decreaseAccount(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
 }
